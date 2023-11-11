@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    
+    div {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h1>My Blog</h1>
+    {% for post in posts %}
+        <div>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.pub_date }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
